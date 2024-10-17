@@ -1,0 +1,260 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navigation */
+header {
+    background: #008080;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the image and text */
+}
+
+.logo-container img {
+    height: 100px;
+    width: 100px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('images/Main page.jpg') no-repeat center center/cover;
+    height: 80vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn {
+    background: #ffd700;
+    color: #008080;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero-section .btn:hover {
+    background: #fff;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Services Section */
+.services-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #eaf0f1;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-section .services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.services-section .service {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.services-section .service:hover {
+    transform: translateY(-10px);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #008080;
+    color: #fff;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-section form button {
+    padding: 10px;
+    background: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section form button:hover {
+    background: #006666;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .services-section .services {
+        flex-direction: column;
+    }
+
+    .services-section .service {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .about-section h2,
+    .services-section h2,
+    .testimonials-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-section form input,
+    .contact-section form textarea {
+        font-size: 0.9rem;
+    }
+}
